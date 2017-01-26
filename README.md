@@ -7,9 +7,9 @@
 
 ## Developement:
 
-### Install Electron 
+### Install Packages
 <pre>
-npm install electron --save-dev
+npm install
 </pre>
 
 ### Starting app
@@ -18,13 +18,6 @@ npm start
 </pre>
 
 
-## Building
-
-### Installing packager
-<pre>
-npm install electron-packager --save-dev
-</pre>
-
-### Build Beispiel
+## Building to ".exe"
 electron-packager ./ App-Name --platform=win32 --arch=ia32
 [API docu](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#platform)
