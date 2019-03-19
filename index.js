@@ -1,4 +1,5 @@
 const { app, BrowserWindow } = require("electron");
+require('electron-reload')(__dirname);
 
 let win = null;
 
@@ -9,8 +10,8 @@ app.on("ready", function () {
 		height: 720,
 		webPreferences: {
 			nodeIntegration: false,
-		}
-		//autoHideMenuBar: true
+		},
+		// autoHideMenuBar: true
 	});
 
 	//load local index.html file
