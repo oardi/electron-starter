@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require("electron");
-require('electron-reload')(__dirname);
+
+if (process.env.NODE_ENV === 'development')
+	require('electron-reload')(__dirname);
 
 let win = null;
 
@@ -18,7 +20,8 @@ app.on("ready", function () {
 	win.loadURL('file://' + __dirname + '/src/index.html');
 
 	//open dev tools with app start
-	win.webContents.openDevTools();
+	if (process.env.NODE_ENV === 'development')
+		win.webContents.openDevTools();
 
 	//clear win on closed
 	win.on('closed', function () {

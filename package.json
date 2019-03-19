@@ -4,8 +4,8 @@
 	"description": "an example electron start up app",
 	"main": "index.js",
 	"scripts": {
-		"start": "electron .",
-		"build:exe": "electron-packager ./ App-Name --platform=win32 --arch=ia32"
+		"start": "SET NODE_ENV=development&& electron .",
+		"build:exe": "electron-packager ./ App-Name --platform=win32 --arch=ia32 --overwrite"
 	},
 	"author": "Ardian Shala",
 	"license": "MIT",
