@@ -1,15 +1,16 @@
 {
-  "name": "electron-example",
-  "version": "0.0.1",
-  "description": "an example electron start up app",
-  "main": "index.js",
-  "scripts": {
-    "start": "electron ."
-  },
-  "author": "Ardian Shala",
-  "license": "MIT",
-  "devDependencies": {
-    "electron": "^1.4.15",
-    "electron-reload": "^1.1.0"
-  }
+	"name": "electron-example",
+	"version": "0.0.1",
+	"description": "an example electron start up app",
+	"main": "index.js",
+	"scripts": {
+		"start": "electron .",
+		"build:exe": "electron-packager ./ App-Name --platform=win32 --arch=ia32"
+	},
+	"author": "Ardian Shala",
+	"license": "MIT",
+	"devDependencies": {
+		"electron": "^4.1.0",
+		"electron-reload": "^1.4.0"
+	}
 }
