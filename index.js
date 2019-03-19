@@ -7,6 +7,9 @@ app.on("ready", function () {
 	win = new BrowserWindow({
 		width: 1200,
 		height: 720,
+		webPreferences: {
+			nodeIntegration: false,
+		}
 		//autoHideMenuBar: true
 	});
 
