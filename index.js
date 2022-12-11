@@ -1,45 +1,36 @@
 const { app, BrowserWindow } = require("electron");
 
-if (process.env.NODE_ENV === 'development')
+if (process.env.NODE_ENV === 'development'){
 	require('electron-reload')(__dirname);
+}
 
-let win = null;
+let mainWindow;
 
-app.on("ready", function () {
-
-	win = new BrowserWindow({
-		width: 1200,
-		height: 720,
-		webPreferences: {
-			nodeIntegration: false,
-		},
-		// autoHideMenuBar: true
+const createWindow = () => {
+	mainWindow = new BrowserWindow({
+		width: 800,
+		height: 600,
 	});
 
-	//load local index.html file
-	win.loadURL('file://' + __dirname + '/src/index.html');
+	mainWindow.loadURL('file://' + __dirname + '/src/index.html');
 
-	//open dev tools with app start
-	if (process.env.NODE_ENV === 'development')
-		win.webContents.openDevTools();
+	mainWindow.webContents.openDevTools();
 
-	//clear win on closed
-	win.on('closed', function () {
-		win = null;
+	mainWindow.on('closed', () => {
+		mainWindow = null;
 	});
+};
 
-});
+app.on('ready', createWindow);
 
-//createWindow on activate
-app.on('activate', function () {
-	if (win == null) {
-		createWindow();
+app.on('window-all-closed', () => {
+	if (process.platform !== 'darwin') {
+		app.quit();
 	}
 });
 
-//quit the app from the process
-app.on('window-all-closed', function () {
-	if (process.platform != 'darwin') {
-		app.quit();
+app.on('activate', () => {
+	if (mainWindow === null) {
+		createWindow();
 	}
 });

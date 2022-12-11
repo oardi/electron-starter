@@ -1,5 +1,6 @@
 .vscode
 dist
 node_modules
-package-lock.json
+App-Name-darwin-arm64
+App-Name-darwin-x64
 App-Name-win32-ia32
