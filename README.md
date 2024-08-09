@@ -1,23 +1,19 @@
-# Electron Basic Setup
+# Electron Basic Setup using Javascript
 
 ## Requirements:
-* Electron
-* Code Editor
 
+-   Electron
 
 ## Developement:
 
 ### Install Packages
+
 <pre>
-npm install
+npm i
 </pre>
 
 ### Starting app
+
 <pre>
 npm start
 </pre>
-
-
-## Building to ".exe"
-electron-packager ./ App-Name --platform=win32 --arch=ia32
-[API docu](https://github.com/electron-userland/electron-packager/blob/master/docs/api.md#platform)

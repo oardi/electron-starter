@@ -1,18 +1,14 @@
 {
 	"name": "electron-example",
 	"version": "1.0.0",
-	"description": "an example electron start up app",
+	"description": "an example electron starter app using plain javascript",
 	"main": "index.js",
 	"scripts": {
-		"start": "NODE_ENV=development&& electron .",
-		"build:exe": "electron-packager ./ App-Name --platform=win32 --arch=ia32 --overwrite",
-		"build:mac": "electron-packager ./ App-Name --platform=darwin --arch=arm64 --overwrite"
+		"start": "electron ."
 	},
 	"author": "Ardian Shala",
 	"license": "MIT",
 	"devDependencies": {
-		"electron": "22.0.0",
-		"electron-packager": "17.1.1",
-		"electron-reload": "2.0.0-alpha.1"
+		"electron": "31.3.1"
 	}
 }

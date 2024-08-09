@@ -1,4 +1,4 @@
-# Editor configuration, see http://editorconfig.org
+# Editor configuration, see https://editorconfig.org
 root = true
 
 [*]
@@ -7,11 +7,10 @@ indent_style = tab
 indent_size = 4
 insert_final_newline = true
 trim_trailing_whitespace = true
-spaces_around_brackets = inside
-max_line_length = 1000
+max_line_length = 120
 
-spaces_around_brackets = inside
-max_line_length = 1000
+[*.html]
+max_line_length = 100
 
 [*.md]
 max_line_length = off
